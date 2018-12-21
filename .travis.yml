@@ -1,0 +1,14 @@
+sudo: required #is required to use docker service in travis
+
+script:
+  - docker --version
+  - cp ./Dockerfile ./context/
+  - docker build -t cypress context
+  - docker images
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: master
