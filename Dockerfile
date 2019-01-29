@@ -1,6 +1,6 @@
 FROM cypress/browsers:chrome69
 
-RUN yarn global add \
+RUN yarn add \
     @cypress/webpack-preprocessor \
     cypress \
     ts-loader \
