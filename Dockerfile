@@ -5,6 +5,8 @@ RUN yarn global add \
 
 RUN yarn add \
     @cypress/webpack-preprocessor \
+    @types/mocha \
+    cypress \
     ts-loader \
     tsconfig-paths-webpack-plugin \
     typescript \
