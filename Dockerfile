@@ -1,7 +1,7 @@
 FROM cypress/browsers:chrome69
 
-RUN yarn global add \
-    cypress
+# RUN yarn global add \
+#     cypress
 
 RUN yarn add \
     @cypress/webpack-preprocessor \
