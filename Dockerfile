@@ -5,9 +5,11 @@ RUN yarn global add \
     cypress \
     ts-loader \
     tsconfig-paths-webpack-plugin \
-    webpack \
     typescript \
+    webpack \
     --ignore-engines
+
+RUN yarn add ts-loader
 
 # This image uses the root user. You might want to switch to non-root user when
 # running this container for security.
