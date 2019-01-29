@@ -1,6 +1,6 @@
 FROM cypress/browsers:chrome69
 
-RUN yard global add \
+RUN yarn global add \
     cypress
 
 RUN yarn add \
