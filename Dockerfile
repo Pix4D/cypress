@@ -1,8 +1,12 @@
 FROM cypress/browsers:chrome69
 
-# RUN yarn global add \
-#     cypress
+# In order to be able to just run cypress (i.e. just `cypress` and not `yarn cypress`).
+# We need to run cypress globally otherwise we get the error 'Could not find any tests to run.'
+RUN yarn global add \
+    cypress
 
+# Need to install dependencies local in order to be found. Cypress is needed to find its typings.
+# Ignore version-check of engines since some dependencies require an older version of node.
 RUN yarn add \
     @cypress/webpack-preprocessor \
     @types/mocha \
