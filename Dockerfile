@@ -8,13 +8,13 @@ RUN yarn global add \
 # Need to install dependencies local in order to be found. Cypress is needed to find its typings.
 # Ignore version-check of engines since some dependencies require an older version of node.
 RUN yarn add \
-    @cypress/webpack-preprocessor \
-    @types/mocha \
-    cypress \
-    ts-loader \
-    tsconfig-paths-webpack-plugin \
-    typescript \
-    webpack \
+    @cypress/webpack-preprocessor@4.0.3 \
+    @types/mocha@5.2.5 \
+    cypress@3.1.5 \
+    ts-loader@5.3.3 \
+    tsconfig-paths-webpack-plugin@3.2.0 \
+    typescript@3.2.4 \
+    webpack@4.29.0 \
     --ignore-engines
 
 # This image uses the root user. You might want to switch to non-root user when
