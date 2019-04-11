@@ -1,4 +1,4 @@
-FROM cypress/browsers:chrome69
+FROM cypress/browsers:node11.13.0-chrome73
 
 # In order to be able to just run cypress (i.e. just `cypress` and not `yarn cypress`).
 # We need to run cypress globally otherwise we get the error 'Could not find any tests to run.'
